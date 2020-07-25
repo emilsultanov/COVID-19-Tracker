@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #f5f6fa;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__left {
+	flex: 0.7;
+	padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__right {
+	max-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.app__dropdown {
+	background-color: #fff;
+}
+
+.app__stats {
+	display: flex;
+	justify-content: space-between;
+}
+
+.infoBox {
+	cursor: pointer;
+	flex: 1;
+	transition: all 0.5s ease;
+}
+
+.infoBox:not(:last-child) {
+	margin-right: 15px;
+}
+
+.infoBox__cases {
+	color: #cc1034;
+	font-weight: 600;
+}
+
+.infoBox__total {
+	color: #6c757d;
+	font-weight: 700;
+}
+
+.infoBox_selected {
+	border-top: 10px solid greenyellow;
+}
+
+.infoBox_red {
+	border-color: red;
+}
+.infoBox__cases_green {
+	color: lightgreen;
+}
+.list {
+	margin-top: 20px;
+	color: #6a5d5d;
+	overflow-y: scroll;
+	max-height: 100vh;
+	list-style-type: none;
+}
+
+.list__item {
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.list__item:nth-last-of-type(odd) {
+	background-color: #f3f2f8;
+}
+
+.map {
+	height: 500px;
+	background-color: #fff;
+	padding: 1rem;
+	border-radius: 10px;
+	margin-top: 16px;
+	box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container {
+	height: 100%;
+}
+
+.info-container {
+	width: 150px;
+}
+
+.info-name {
+	font-size: 20px;
+	font-weight: bold;
+	color: #555;
+}
+
+.info-confirmed,
+.info-recovered,
+.info-deaths {
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.info-flag {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 10px;
 }
